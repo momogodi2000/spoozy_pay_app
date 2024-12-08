@@ -6,7 +6,6 @@ import 'ViewModel/deposits/deposit_view_model.dart';
 import 'ViewModel/loan/loan_view_model.dart';
 import 'ViewModel/menu/menu_view_model.dart';
 import 'ViewModel/splash_view_model.dart';
-import 'ViewModel/transaction/transaction_view_models.dart';
 import 'views/splash_screen.dart';
 import 'views/loan/loan_list_screen.dart';
 

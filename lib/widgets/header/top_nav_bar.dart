@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../views/profile/profile_screen.dart';
-import '../../views/transaction/transaction_view.dart';
 
 class TopNavBar extends StatelessWidget {
   final String title;
@@ -123,7 +122,6 @@ class TopNavBar extends StatelessWidget {
                       primaryColor: primaryColor,
                       onTap: () {
                         // Navigate to Transactions page
-                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (builder)=>SpozyTransactionPage()),);
 
                       },
                     ),
