@@ -1,3 +1,13 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.1.4'
+    }
+}
+
 allprojects {
     repositories {
         google()
@@ -5,12 +15,20 @@ allprojects {
     }
 }
 
+// Specify custom build directories
 rootProject.buildDir = "../build"
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
-}
-subprojects {
     project.evaluationDependsOn(":app")
+}
+
+// Add dependency resolution strategy
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        if (details.requested.group == 'com.android.tools.build') {
+            details.useVersion '8.1.4'
+        }
+    }
 }
 
 tasks.register("clean", Delete) {
