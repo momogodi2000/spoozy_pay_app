@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../views/finance_transaction/financial_transaction_page.dart';
 import '../../views/profile/profile_screen.dart';
+import '../../views/voucher_page/voucher_page.dart';
 
 class CustomAnimatedAppBar extends StatefulWidget {
   const CustomAnimatedAppBar({Key? key}) : super(key: key);
@@ -73,6 +75,8 @@ class CustomAnimatedAppBar extends StatefulWidget {
                       primaryColor: primaryColor,
                       onTap: () {
                         // Navigate to Transactions page
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (builder)=>FinancialTransactionPage()),);
+
                       },
                     ),
                     _buildAnimatedDrawerItem(
@@ -145,6 +149,8 @@ class CustomAnimatedAppBar extends StatefulWidget {
                       primaryColor: primaryColor,
                       onTap: () {
                         // Navigate to Connected Voucher page
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (builder)=>VoucherManagementPage()),);
+
                       },
                     ),
                     const Padding(
@@ -154,7 +160,7 @@ class CustomAnimatedAppBar extends StatefulWidget {
                     _buildAnimatedDrawerItem(
                       context: context,
                       icon: Icons.account_circle_outlined,
-                      title: 'Spoozy Management',
+                      title: 'Spoozy Profile Management',
                       primaryColor: primaryColor,
                       hasDropdown: true,
                       dropdownItems: [
