@@ -172,6 +172,15 @@ class CustomAnimatedAppBar extends StatefulWidget {
                           },
                         ),
                         _buildDropdownItem(
+                            icon: Icons.phone_outlined,
+                            title: 'Personal Number',
+                            onTap: () {
+                              // Navigate to the personal number interface
+
+                            },
+                        ),
+
+                        _buildDropdownItem(
                           icon: Icons.security_outlined,
                           title: 'Parental Control',
                           onTap: () {

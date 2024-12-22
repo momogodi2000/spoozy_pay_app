@@ -28,15 +28,13 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => DepositViewModel()),
 
 
-
-
-
       ],
       child: MaterialApp(
         title: isSpoozyPay ? 'Spoozy Pay' : 'Loan Management',
         theme: isSpoozyPay ? spoozyPayTheme() : loanManagementTheme(),
         darkTheme: isSpoozyPay ? spoozyPayDarkTheme() : loanManagementDarkTheme(),
         home: isSpoozyPay ? SplashScreen() : LoanListScreen(),
+
       ),
     );
   }
